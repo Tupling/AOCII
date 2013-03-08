@@ -18,6 +18,11 @@
 		337CFFC716E663880078F7F3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 337CFFC616E663880078F7F3 /* Default-568h@2x.png */; };
 		337CFFCA16E663880078F7F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CFFC816E663880078F7F3 /* MainStoryboard.storyboard */; };
 		337CFFCD16E663880078F7F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337CFFCC16E663880078F7F3 /* ViewController.m */; };
+		337D1A3716E99B5600CA6423 /* WeaponFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A3616E99B5600CA6423 /* WeaponFactory.m */; };
+		337D1A3B16E99B6900CA6423 /* semiAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A3A16E99B6900CA6423 /* semiAuto.m */; };
+		337D1A3E16E99B8300CA6423 /* Pistol.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A3D16E99B8300CA6423 /* Pistol.m */; };
+		337D1A4116E99B9500CA6423 /* Rifle.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A4016E99B9500CA6423 /* Rifle.m */; };
+		337D1A4416E99BE200CA6423 /* ClassBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A4316E99BE200CA6423 /* ClassBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,16 @@
 		337CFFC916E663880078F7F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		337CFFCB16E663880078F7F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		337CFFCC16E663880078F7F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		337D1A3516E99B5600CA6423 /* WeaponFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaponFactory.h; path = Model/WeaponFactory.h; sourceTree = "<group>"; };
+		337D1A3616E99B5600CA6423 /* WeaponFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaponFactory.m; path = Model/WeaponFactory.m; sourceTree = "<group>"; };
+		337D1A3916E99B6900CA6423 /* semiAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = semiAuto.h; path = Model/semiAuto.h; sourceTree = "<group>"; };
+		337D1A3A16E99B6900CA6423 /* semiAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = semiAuto.m; path = Model/semiAuto.m; sourceTree = "<group>"; };
+		337D1A3C16E99B8300CA6423 /* Pistol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pistol.h; path = Model/Pistol.h; sourceTree = "<group>"; };
+		337D1A3D16E99B8300CA6423 /* Pistol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pistol.m; path = Model/Pistol.m; sourceTree = "<group>"; };
+		337D1A3F16E99B9500CA6423 /* Rifle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rifle.h; path = Model/Rifle.h; sourceTree = "<group>"; };
+		337D1A4016E99B9500CA6423 /* Rifle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rifle.m; path = Model/Rifle.m; sourceTree = "<group>"; };
+		337D1A4216E99BE200CA6423 /* ClassBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassBase.h; path = Model/ClassBase.h; sourceTree = "<group>"; };
+		337D1A4316E99BE200CA6423 /* ClassBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassBase.m; path = Model/ClassBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,7 @@
 		337CFFB616E663880078F7F3 /* projectOne */ = {
 			isa = PBXGroup;
 			children = (
+				337D1A4516E99BEA00CA6423 /* Model */,
 				337CFFBF16E663880078F7F3 /* AppDelegate.h */,
 				337CFFC016E663880078F7F3 /* AppDelegate.m */,
 				337CFFC816E663880078F7F3 /* MainStoryboard.storyboard */,
@@ -105,6 +121,23 @@
 				337CFFC616E663880078F7F3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		337D1A4516E99BEA00CA6423 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				337D1A3516E99B5600CA6423 /* WeaponFactory.h */,
+				337D1A3616E99B5600CA6423 /* WeaponFactory.m */,
+				337D1A3916E99B6900CA6423 /* semiAuto.h */,
+				337D1A3A16E99B6900CA6423 /* semiAuto.m */,
+				337D1A3C16E99B8300CA6423 /* Pistol.h */,
+				337D1A3D16E99B8300CA6423 /* Pistol.m */,
+				337D1A3F16E99B9500CA6423 /* Rifle.h */,
+				337D1A4016E99B9500CA6423 /* Rifle.m */,
+				337D1A4216E99BE200CA6423 /* ClassBase.h */,
+				337D1A4316E99BE200CA6423 /* ClassBase.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +209,11 @@
 				337CFFBD16E663880078F7F3 /* main.m in Sources */,
 				337CFFC116E663880078F7F3 /* AppDelegate.m in Sources */,
 				337CFFCD16E663880078F7F3 /* ViewController.m in Sources */,
+				337D1A3716E99B5600CA6423 /* WeaponFactory.m in Sources */,
+				337D1A3B16E99B6900CA6423 /* semiAuto.m in Sources */,
+				337D1A3E16E99B8300CA6423 /* Pistol.m in Sources */,
+				337D1A4116E99B9500CA6423 /* Rifle.m in Sources */,
+				337D1A4416E99BE200CA6423 /* ClassBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +330,7 @@
 				337CFFD216E663880078F7F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

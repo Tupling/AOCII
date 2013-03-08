@@ -10,4 +10,13 @@
 
 @interface ViewController : UIViewController
 
+{
+    UILabel *headerLabel;
+    UILabel *semiAutoHeaderLabel;
+    UILabel *semiAutoInfoLabel;
+    UILabel *pistolHeaderLabel;
+    UILabel *rifleHeaderLabel;
+    UILabel *rifleInfoLabel;
+}
+
 @end
