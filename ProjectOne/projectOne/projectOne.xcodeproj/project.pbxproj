@@ -98,7 +98,6 @@
 		337CFFB616E663880078F7F3 /* projectOne */ = {
 			isa = PBXGroup;
 			children = (
-				337D1A4516E99BEA00CA6423 /* Model */,
 				337CFFBF16E663880078F7F3 /* AppDelegate.h */,
 				337CFFC016E663880078F7F3 /* AppDelegate.m */,
 				337CFFC816E663880078F7F3 /* MainStoryboard.storyboard */,
@@ -112,20 +111,6 @@
 		337CFFB716E663880078F7F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				337CFFB816E663880078F7F3 /* projectOne-Info.plist */,
-				337CFFB916E663880078F7F3 /* InfoPlist.strings */,
-				337CFFBC16E663880078F7F3 /* main.m */,
-				337CFFBE16E663880078F7F3 /* projectOne-Prefix.pch */,
-				337CFFC216E663880078F7F3 /* Default.png */,
-				337CFFC416E663880078F7F3 /* Default@2x.png */,
-				337CFFC616E663880078F7F3 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		337D1A4516E99BEA00CA6423 /* Model */ = {
-			isa = PBXGroup;
-			children = (
 				337D1A3516E99B5600CA6423 /* WeaponFactory.h */,
 				337D1A3616E99B5600CA6423 /* WeaponFactory.m */,
 				337D1A3916E99B6900CA6423 /* semiAuto.h */,
@@ -136,8 +121,15 @@
 				337D1A4016E99B9500CA6423 /* Rifle.m */,
 				337D1A4216E99BE200CA6423 /* ClassBase.h */,
 				337D1A4316E99BE200CA6423 /* ClassBase.m */,
+				337CFFB816E663880078F7F3 /* projectOne-Info.plist */,
+				337CFFB916E663880078F7F3 /* InfoPlist.strings */,
+				337CFFBC16E663880078F7F3 /* main.m */,
+				337CFFBE16E663880078F7F3 /* projectOne-Prefix.pch */,
+				337CFFC216E663880078F7F3 /* Default.png */,
+				337CFFC416E663880078F7F3 /* Default@2x.png */,
+				337CFFC616E663880078F7F3 /* Default-568h@2x.png */,
 			);
-			name = Model;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
