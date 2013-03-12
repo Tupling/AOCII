@@ -14,10 +14,13 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
 
+ 
 
 //Change Background Segment Control
 -(IBAction)onSelected:(id)sender
@@ -39,13 +42,28 @@
             self.view.backgroundColor = [UIColor orangeColor];
         }
     }
+    
+
 }
-//Onclick Method for Selected Weapon Buttons
+//Onclick Method for Selected Weapon Buttons and Calculate Cost
 -(IBAction)onClick:(id)sender
 {
     
+    
+    
+    UIStepper *stepControl = (UIStepper*)sender;
+    if (stepControl != nil)
+    {
+        int currentValue = stepControl.value;
+        
+        textField.text = [NSString stringWithFormat:@"%d - Weapons", currentValue];
+    }
+    
 }
 
+
+
+//Action to view Information View
 -(IBAction)viewInfo:(id)sender
 {
     InfoViewController *infoController = [[InfoViewController alloc] initWithNibName:@"InfoView" bundle:nil];
@@ -58,12 +76,9 @@
 
 
 
-
-
-
 - (void)viewDidLoad
 {
-    //Tap screen to make keyboard disappear
+   //Tap screen to make keyboard disappear
     UITapGestureRecognizer *tapOnScreen = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardDisappear)];
     
     //set to NO, so not all touches are cancelled. If set to YES User will not be able to touch ShowDate or Info Buttons

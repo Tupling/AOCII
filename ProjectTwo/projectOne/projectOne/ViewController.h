@@ -11,7 +11,8 @@
 @interface ViewController : UIViewController
 
 {
-    
+    IBOutlet UIStepper *stepperControl;
+    IBOutlet UITextField *textField;
 }
 
 -(IBAction)onSelected:(id)sender;
