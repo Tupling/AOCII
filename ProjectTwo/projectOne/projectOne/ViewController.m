@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WeaponFactory.h"
+#import "InfoViewController.h"
 
 
 
@@ -47,16 +48,40 @@
 
 -(IBAction)viewInfo:(id)sender
 {
-    
+    InfoViewController *infoController = [[InfoViewController alloc] initWithNibName:@"InfoView" bundle:nil];
+    if (infoController != nil)
+    {
+        [self presentViewController:infoController animated:YES completion:nil];
+    }
 }
+
+
+
+
+
+
 
 - (void)viewDidLoad
 {
-
+    //Tap screen to make keyboard disappear
+    UITapGestureRecognizer *tapOnScreen = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardDisappear)];
+    
+    //set to NO, so not all touches are cancelled. If set to YES User will not be able to touch ShowDate or Info Buttons
+    tapOnScreen.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapOnScreen];
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+
+- (void)keyboardDisappear {
+    
+    [self.view endEditing:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
