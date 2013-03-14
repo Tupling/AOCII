@@ -8,6 +8,7 @@
 
 #import "InfoViewController.h"
 
+
 @interface InfoViewController ()
 
 @end
@@ -21,6 +22,81 @@
         // Custom initialization
     }
     return self;
+}
+//Send Email Method
+- (IBAction)sendEmail:(id)sender
+{
+    NSString *subjectLine = @"I would like to contact Dale Tupling";
+    
+    NSString *message = @"";
+    
+    NSArray *toContact = [NSArray arrayWithObject:@"tupling@fullsail.edu"];
+    
+    MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
+    mailController.mailComposeDelegate = self;
+    
+    [mailController setSubject:subjectLine];
+    [mailController setMessageBody:message isHTML:NO];
+    [mailController setToRecipients:toContact];
+    
+    [self presentViewController:mailController animated:YES completion:nil];
+    
+     
+     }
+//Dismis the Mail View Controller
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+            //Response to message canel
+        case MFMailComposeResultCancelled:
+        {
+            UIAlertView *deleteAlert = [[UIAlertView alloc] initWithTitle:@"Draft Deleted"
+                                                            message:@"Your draft email has been deleted"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [deleteAlert show];
+        }
+            break;
+            //Response to message saved
+        case MFMailComposeResultSaved:
+        {
+            UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Draft Saved"
+                                                                  message:@"Your draft email has been saved"
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
+            [saveAlert show];
+        }
+            break;
+            //Response to message sent
+        case MFMailComposeResultSent:
+        {
+            UIAlertView *sentAlert = [[UIAlertView alloc] initWithTitle:@"Email Sent"
+                                                                  message:@"Your email has been sent"
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
+            [sentAlert show];
+        }
+            break;
+            //Response to message failure
+        case MFMailComposeResultFailed:
+        {
+            UIAlertView *deleteAlert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
+            [deleteAlert show];
+        }
+            break;
+        default:
+            break;
+    }
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)viewDidLoad

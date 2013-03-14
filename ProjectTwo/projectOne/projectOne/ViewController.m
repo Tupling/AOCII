@@ -55,6 +55,10 @@
         }
         else if (bgSelectionIndex == 1)
         {
+            self.view.backgroundColor = [UIColor redColor];
+        }
+        else if (bgSelectionIndex == 2)
+        {
             self.view.backgroundColor = [UIColor grayColor];
         }
         else
@@ -143,6 +147,7 @@
     if (semiAutoButton.enabled == false)
     {
         int totalQuanityCost = [thisSemiAuto TotalCostOfWeapon] * weaponQuanity;
+
         
         //Display different text depending on quanity user wants
             if(stepperControl.value > 1)
@@ -157,12 +162,22 @@
         
         //Reset Stepper Value
         stepperControl.value = 1;
+        
+        //Reset all buttons to enabled state
+        pistolButton.enabled = true;
+        semiAutoButton.enabled = true;
+        rifleButton.enabled = true;
     }
     
     //Calculate Pistol Data
     if (pistolButton.enabled == false)
     {
         int totalQuanityCost = [thisPistol TotalCostOfWeapon] * weaponQuanity;
+        
+        //Reset all buttons to enabled state
+        pistolButton.enabled = true;
+        semiAutoButton.enabled = true;
+        rifleButton.enabled = true;
         
             //Display different text depending on quanity user wants
             if(stepperControl.value > 1)
@@ -176,12 +191,19 @@
         
         //Reset Stepper Value
         stepperControl.value = 1;
+        
+        //Reset all buttons to enabled state
+        pistolButton.enabled = true;
+        semiAutoButton.enabled = true;
+        rifleButton.enabled = true;
     }
     
     //Calculate Rifle Data
     if (rifleButton.enabled == false)
     {
         int totalQuanityCost = [thisRifle TotalCostOfWeapon] * weaponQuanity;
+        
+     
         
             //Display different text depending on quanity user wants
             if(stepperControl.value > 1)
@@ -192,7 +214,17 @@
             {
                 textField.text = [NSString stringWithFormat:@"%d - %@ cost $%d", weaponQuanity, [thisRifle model], totalQuanityCost];
             }
+        
+        //Reset Stepper Value
+        stepperControl.value = 1;
+        
+        //Reset all buttons to enabled state
+        pistolButton.enabled = true;
+        semiAutoButton.enabled = true;
+        rifleButton.enabled = true;
+    
     }
+
 }
 
 //Action to view Information View
@@ -208,7 +240,7 @@
 
 
 
-
+//Keyboard disappear
 - (void)keyboardDisappear {
     
     [self.view endEditing:YES];

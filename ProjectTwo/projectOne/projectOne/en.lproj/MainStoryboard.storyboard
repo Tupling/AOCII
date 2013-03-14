@@ -38,11 +38,12 @@
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QBp-yn-viz">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="187" id="ovs-Uy-gtf"/>
+                                    <constraint firstAttribute="width" constant="249" id="Fds-cP-Gln"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="White"/>
-                                    <segment title="Grey"/>
+                                    <segment title="Default"/>
+                                    <segment title="Red"/>
+                                    <segment title="Gray"/>
                                     <segment title="Orange"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,6 +154,7 @@
                             <constraint firstItem="aFk-CF-iVh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="172" id="Egp-wX-RIa"/>
                             <constraint firstItem="X6j-Lr-Ylx" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="EoW-qO-pRJ"/>
                             <constraint firstItem="aFk-CF-iVh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HWi-ra-lhr"/>
+                            <constraint firstItem="ek2-24-Ivv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="94" id="I5v-El-RcY"/>
                             <constraint firstItem="ek2-24-Ivv" firstAttribute="top" secondItem="ZyV-ve-3ux" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JRy-50-7Ye"/>
                             <constraint firstItem="Wm1-66-sRu" firstAttribute="leading" secondItem="o88-cL-gLh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LWs-kZ-WnI"/>
                             <constraint firstItem="QBp-yn-viz" firstAttribute="top" secondItem="ek2-24-Ivv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Q1X-a4-THU"/>
@@ -162,12 +164,11 @@
                             <constraint firstItem="IxQ-ke-aTO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XvW-H0-XK7"/>
                             <constraint firstItem="IxQ-ke-aTO" firstAttribute="top" secondItem="aFk-CF-iVh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YFK-qa-vJt"/>
                             <constraint firstItem="X6j-Lr-Ylx" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="b3r-YO-mNO"/>
-                            <constraint firstItem="ek2-24-Ivv" firstAttribute="trailing" secondItem="QBp-yn-viz" secondAttribute="trailing" type="default" id="coA-Qp-RaH"/>
+                            <constraint firstItem="QBp-yn-viz" firstAttribute="centerX" secondItem="ZyV-ve-3ux" secondAttribute="centerX" type="default" id="e10-at-WEA"/>
                             <constraint firstAttribute="trailing" secondItem="aFk-CF-iVh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="e9G-Aw-u3t"/>
                             <constraint firstItem="o88-cL-gLh" firstAttribute="bottom" secondItem="Wm1-66-sRu" secondAttribute="bottom" type="default" id="fnb-Gu-uBK"/>
                             <constraint firstAttribute="trailing" secondItem="gAe-JE-7x5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="frF-R3-RYP"/>
                             <constraint firstItem="aFk-CF-iVh" firstAttribute="centerX" secondItem="SKF-bP-7xU" secondAttribute="centerX" type="default" id="mId-18-bm6"/>
-                            <constraint firstItem="ZyV-ve-3ux" firstAttribute="centerX" secondItem="QBp-yn-viz" secondAttribute="centerX" type="default" id="o93-sU-67d"/>
                             <constraint firstItem="ZyV-ve-3ux" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oRD-v6-Wsu"/>
                             <constraint firstItem="ZVQ-Kg-cZY" firstAttribute="leading" secondItem="Wm1-66-sRu" secondAttribute="leading" type="default" id="qn6-4P-Isv"/>
                             <constraint firstItem="ZVQ-Kg-cZY" firstAttribute="top" secondItem="3" secondAttribute="top" constant="104" id="r41-xb-oW1"/>
