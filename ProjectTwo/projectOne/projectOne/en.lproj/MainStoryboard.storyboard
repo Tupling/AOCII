@@ -51,20 +51,20 @@
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select weapon below" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Wm1-66-sRu">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="QnS-ol-NmO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Cost:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o88-cL-gLh">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="7QB-h4-6zn"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZVQ-Kg-cZY">
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZVQ-Kg-cZY">
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="valueChanged" id="Gbe-Z6-mMT"/>
+                                    <action selector="stepUp:" destination="2" eventType="valueChanged" id="GYu-NR-N4l"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quanity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2F-9U-ttd">
@@ -77,46 +77,44 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFk-CF-iVh">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Kua-Me-O0k"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFk-CF-iVh">
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal" title="Colt AR-15">
+                                <state key="normal" backgroundImage="coltAr.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="ntt-Ag-fF5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-ke-aTO">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Gol-0g-JsC"/>
-                                </constraints>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-ke-aTO">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Springfield XDM 45">
+                                <state key="normal" title="Springfield XDM 45" image="springfieldXDM.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="6wl-Vc-M72"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-JE-7x5">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="7lP-KU-BFE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Remington 700">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-JE-7x5">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Marlin X7" image="marlinX7.png">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="5aa-lH-Iyl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Change Background Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek2-24-Ivv">
                                 <constraints>
@@ -127,65 +125,97 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZB-hE-7sh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-ve-3ux">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="4sB-eC-hjl"/>
+                                    <constraint firstAttribute="height" constant="38" id="OSx-k8-NKU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Calculate Weapon Cost">
+                                <state key="normal" title="Button" image="calculateRed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateTotal:" destination="2" eventType="touchUpInside" id="Lro-Cd-LHh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gAe-JE-7x5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0xg-IG-39i"/>
+                            <constraint firstItem="gAe-JE-7x5" firstAttribute="top" secondItem="IxQ-ke-aTO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2JW-dX-2Ux"/>
                             <constraint firstAttribute="bottom" secondItem="QBp-yn-viz" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="3Hd-py-Ywc"/>
                             <constraint firstItem="Wm1-66-sRu" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="4EO-uK-Tpw"/>
+                            <constraint firstItem="SKF-bP-7xU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="147" id="8FM-fE-rkT"/>
+                            <constraint firstItem="X6j-Lr-Ylx" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="DHs-FM-DXQ"/>
+                            <constraint firstItem="aFk-CF-iVh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="172" id="Egp-wX-RIa"/>
                             <constraint firstItem="X6j-Lr-Ylx" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="EoW-qO-pRJ"/>
-                            <constraint firstAttribute="trailing" secondItem="aFk-CF-iVh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HqX-tO-EgW"/>
-                            <constraint firstItem="gAe-JE-7x5" firstAttribute="top" secondItem="IxQ-ke-aTO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Kxe-Lm-4Dj"/>
+                            <constraint firstItem="aFk-CF-iVh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HWi-ra-lhr"/>
+                            <constraint firstItem="ek2-24-Ivv" firstAttribute="top" secondItem="ZyV-ve-3ux" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JRy-50-7Ye"/>
                             <constraint firstItem="Wm1-66-sRu" firstAttribute="leading" secondItem="o88-cL-gLh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LWs-kZ-WnI"/>
-                            <constraint firstAttribute="bottom" secondItem="rZB-hE-7sh" secondAttribute="bottom" constant="97" id="PAf-f4-ZDf"/>
                             <constraint firstItem="QBp-yn-viz" firstAttribute="top" secondItem="ek2-24-Ivv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Q1X-a4-THU"/>
                             <constraint firstItem="j2F-9U-ttd" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Q6n-Nv-KbE"/>
+                            <constraint firstAttribute="trailing" secondItem="IxQ-ke-aTO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="R9z-cA-IIM"/>
                             <constraint firstItem="j2F-9U-ttd" firstAttribute="centerY" secondItem="ZVQ-Kg-cZY" secondAttribute="centerY" type="default" id="Rm5-5n-LcJ"/>
-                            <constraint firstItem="SKF-bP-7xU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="147" id="Tso-Tv-C4V"/>
-                            <constraint firstItem="X6j-Lr-Ylx" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="UK1-eW-T7c"/>
-                            <constraint firstAttribute="trailing" secondItem="rZB-hE-7sh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UvM-Yx-Lf9"/>
+                            <constraint firstItem="IxQ-ke-aTO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XvW-H0-XK7"/>
+                            <constraint firstItem="IxQ-ke-aTO" firstAttribute="top" secondItem="aFk-CF-iVh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YFK-qa-vJt"/>
                             <constraint firstItem="X6j-Lr-Ylx" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="b3r-YO-mNO"/>
                             <constraint firstItem="ek2-24-Ivv" firstAttribute="trailing" secondItem="QBp-yn-viz" secondAttribute="trailing" type="default" id="coA-Qp-RaH"/>
-                            <constraint firstAttribute="trailing" secondItem="gAe-JE-7x5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dc5-Qn-JBE"/>
-                            <constraint firstItem="aFk-CF-iVh" firstAttribute="centerX" secondItem="SKF-bP-7xU" secondAttribute="centerX" type="default" id="eXB-kJ-AoJ"/>
-                            <constraint firstItem="aFk-CF-iVh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="esR-vG-JDy"/>
+                            <constraint firstAttribute="trailing" secondItem="aFk-CF-iVh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="e9G-Aw-u3t"/>
                             <constraint firstItem="o88-cL-gLh" firstAttribute="bottom" secondItem="Wm1-66-sRu" secondAttribute="bottom" type="default" id="fnb-Gu-uBK"/>
-                            <constraint firstItem="IxQ-ke-aTO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gZS-JI-ZbH"/>
-                            <constraint firstItem="gAe-JE-7x5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iSR-eX-Fuc"/>
-                            <constraint firstAttribute="trailing" secondItem="Wm1-66-sRu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="nI4-1B-9PR"/>
-                            <constraint firstAttribute="trailing" secondItem="IxQ-ke-aTO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qII-5Y-cIC"/>
+                            <constraint firstAttribute="trailing" secondItem="gAe-JE-7x5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="frF-R3-RYP"/>
+                            <constraint firstItem="aFk-CF-iVh" firstAttribute="centerX" secondItem="SKF-bP-7xU" secondAttribute="centerX" type="default" id="mId-18-bm6"/>
+                            <constraint firstItem="ZyV-ve-3ux" firstAttribute="centerX" secondItem="QBp-yn-viz" secondAttribute="centerX" type="default" id="o93-sU-67d"/>
+                            <constraint firstItem="ZyV-ve-3ux" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oRD-v6-Wsu"/>
                             <constraint firstItem="ZVQ-Kg-cZY" firstAttribute="leading" secondItem="Wm1-66-sRu" secondAttribute="leading" type="default" id="qn6-4P-Isv"/>
                             <constraint firstItem="ZVQ-Kg-cZY" firstAttribute="top" secondItem="3" secondAttribute="top" constant="104" id="r41-xb-oW1"/>
-                            <constraint firstItem="rZB-hE-7sh" firstAttribute="centerX" secondItem="QBp-yn-viz" secondAttribute="centerX" type="default" id="rR7-hI-XvU"/>
-                            <constraint firstItem="rZB-hE-7sh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="t6l-R0-DoR"/>
                             <constraint firstItem="o88-cL-gLh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="trx-ck-yvL"/>
-                            <constraint firstItem="IxQ-ke-aTO" firstAttribute="top" secondItem="aFk-CF-iVh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x3K-mg-3Se"/>
-                            <constraint firstItem="aFk-CF-iVh" firstAttribute="top" secondItem="SKF-bP-7xU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zMt-Uw-U60"/>
+                            <constraint firstAttribute="trailing" secondItem="ZyV-ve-3ux" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wcl-Fe-x1u"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calculateButton" destination="ZyV-ve-3ux" id="8Vk-UC-3Yx"/>
+                        <outlet property="pistolButton" destination="IxQ-ke-aTO" id="urN-SP-Jes"/>
+                        <outlet property="rifleButton" destination="gAe-JE-7x5" id="8hK-U6-V0S"/>
+                        <outlet property="semiAutoButton" destination="aFk-CF-iVh" id="ZTK-24-35x"/>
                         <outlet property="stepperControl" destination="ZVQ-Kg-cZY" id="3xl-bD-gya"/>
                         <outlet property="textField" destination="Wm1-66-sRu" id="7CF-h2-xqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="43"/>
+            <point key="canvasLocation" x="-334" y="-79"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calculateRed.png" width="285" height="37"/>
+        <image name="coltAr.png" width="285" height="37"/>
+        <image name="marlinX7.png" width="285" height="37"/>
+        <image name="springfieldXDM.png" width="285" height="37"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateTotal:"/>
+                <relationship kind="action" name="onClick:"/>
+                <relationship kind="action" name="onSelected:"/>
+                <relationship kind="action" name="stepUp:"/>
+                <relationship kind="action" name="viewInfo:"/>
+                <relationship kind="outlet" name="calculateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pistolButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rifleButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="semiAutoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stepperControl" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

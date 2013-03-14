@@ -26,6 +26,10 @@
 		337D1A3E16E99B8300CA6423 /* Pistol.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A3D16E99B8300CA6423 /* Pistol.m */; };
 		337D1A4116E99B9500CA6423 /* Rifle.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A4016E99B9500CA6423 /* Rifle.m */; };
 		337D1A4416E99BE200CA6423 /* ClassBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 337D1A4316E99BE200CA6423 /* ClassBase.m */; };
+		33A7265C16F26B7700C1705F /* springfieldXDM.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A7265B16F26B7700C1705F /* springfieldXDM.png */; };
+		33A7265E16F26C5C00C1705F /* marlinX7.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A7265D16F26C5C00C1705F /* marlinX7.png */; };
+		33A7266016F26D1A00C1705F /* calculateRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A7265F16F26D1A00C1705F /* calculateRed.png */; };
+		33B311A816F268D400E9B085 /* coltAr.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B311A716F268D400E9B085 /* coltAr.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		337D1A4016E99B9500CA6423 /* Rifle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rifle.m; path = Model/Rifle.m; sourceTree = "<group>"; };
 		337D1A4216E99BE200CA6423 /* ClassBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassBase.h; path = Model/ClassBase.h; sourceTree = "<group>"; };
 		337D1A4316E99BE200CA6423 /* ClassBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassBase.m; path = Model/ClassBase.m; sourceTree = "<group>"; };
+		33A7265B16F26B7700C1705F /* springfieldXDM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = springfieldXDM.png; sourceTree = "<group>"; };
+		33A7265D16F26C5C00C1705F /* marlinX7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marlinX7.png; sourceTree = "<group>"; };
+		33A7265F16F26D1A00C1705F /* calculateRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculateRed.png; sourceTree = "<group>"; };
+		33B311A716F268D400E9B085 /* coltAr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coltAr.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,10 @@
 		337CFFB716E663880078F7F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33A7265F16F26D1A00C1705F /* calculateRed.png */,
+				33A7265D16F26C5C00C1705F /* marlinX7.png */,
+				33A7265B16F26B7700C1705F /* springfieldXDM.png */,
+				33B311A716F268D400E9B085 /* coltAr.png */,
 				3379F66816EF7EB900B96EE3 /* me.jpg */,
 				3379F65A16EF762A00B96EE3 /* InfoView.xib */,
 				3379F65D16EF764700B96EE3 /* InfoViewController.h */,
@@ -202,6 +214,10 @@
 				337CFFCA16E663880078F7F3 /* MainStoryboard.storyboard in Resources */,
 				3379F65B16EF762A00B96EE3 /* InfoView.xib in Resources */,
 				3379F66916EF7EB900B96EE3 /* me.jpg in Resources */,
+				33B311A816F268D400E9B085 /* coltAr.png in Resources */,
+				33A7265C16F26B7700C1705F /* springfieldXDM.png in Resources */,
+				33A7265E16F26C5C00C1705F /* marlinX7.png in Resources */,
+				33A7266016F26D1A00C1705F /* calculateRed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

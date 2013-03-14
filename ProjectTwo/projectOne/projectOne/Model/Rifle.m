@@ -18,8 +18,8 @@
     {
         //Set property values
         [self setCost:550];
-        [self setMaker:@"Remington"];
-        [self setModel:@"700"];
+        [self setMaker:@"Marlin"];
+        [self setModel:@"X7"];
         [self setScopeCost:450];
         [self setSlingCost:40];
         [self setButtStockPadCost:100];
