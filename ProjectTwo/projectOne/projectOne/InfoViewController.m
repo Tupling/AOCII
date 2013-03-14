@@ -26,15 +26,20 @@
 //Send Email Method
 - (IBAction)sendEmail:(id)sender
 {
+    //Set content for mail attributes
     NSString *subjectLine = @"I would like to contact Dale Tupling";
     
+    //default message is blank
     NSString *message = @"";
     
     NSArray *toContact = [NSArray arrayWithObject:@"tupling@fullsail.edu"];
     
+    //Allocate and Initialize Mail View Controller
     MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
     mailController.mailComposeDelegate = self;
     
+    
+    //Assign mail controller attributes to pre dertemined content
     [mailController setSubject:subjectLine];
     [mailController setMessageBody:message isHTML:NO];
     [mailController setToRecipients:toContact];
@@ -43,7 +48,7 @@
     
      
      }
-//Dismis the Mail View Controller
+//Dismiss the Mail View Controller
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     switch (result)
