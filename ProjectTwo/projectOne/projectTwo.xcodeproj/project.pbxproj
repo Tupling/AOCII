@@ -91,7 +91,6 @@
 		337CFFA116E663880078F7F3 = {
 			isa = PBXGroup;
 			children = (
-				3388E46516F2782A00EAFD7A /* MessageUI.framework */,
 				337CFFB616E663880078F7F3 /* projectTwo */,
 				337CFFAF16E663880078F7F3 /* Frameworks */,
 				337CFFAD16E663880078F7F3 /* Products */,
@@ -109,6 +108,7 @@
 		337CFFAF16E663880078F7F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3388E46516F2782A00EAFD7A /* MessageUI.framework */,
 				337CFFB016E663880078F7F3 /* UIKit.framework */,
 				337CFFB216E663880078F7F3 /* Foundation.framework */,
 				337CFFB416E663880078F7F3 /* CoreGraphics.framework */,

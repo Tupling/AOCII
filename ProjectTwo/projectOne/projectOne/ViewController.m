@@ -133,12 +133,7 @@
 //Calculate total cost of desired weapon amount
 -(IBAction)calculateTotal:(id)sender
 {
-    
-    //Instances
-    semiAuto *thisSemiAuto = (semiAuto *)[WeaponFactory CreateWeapon:SEMIAUTORIFLE];
-    Pistol *thisPistol = (Pistol*)[WeaponFactory CreateWeapon:PISTOLHANDGUN];
-    Rifle *thisRifle = (Rifle*)[WeaponFactory CreateWeapon:HUNTINGRIFLE];
-    
+
     //Vairable for stepperControle Value
     int weaponQuanity = stepperControl.value;
     
@@ -146,6 +141,9 @@
     //Calculate Semi Auto data
     if (semiAutoButton.enabled == false)
     {
+        //Instance
+        semiAuto *thisSemiAuto = (semiAuto *)[WeaponFactory CreateWeapon:SEMIAUTORIFLE];
+        
         int totalQuanityCost = [thisSemiAuto TotalCostOfWeapon] * weaponQuanity;
 
         
@@ -168,10 +166,15 @@
         semiAutoButton.enabled = true;
         rifleButton.enabled = true;
     }
+
+    
     
     //Calculate Pistol Data
     if (pistolButton.enabled == false)
     {
+        //Instance
+        Pistol *thisPistol = (Pistol*)[WeaponFactory CreateWeapon:PISTOLHANDGUN];
+        
         int totalQuanityCost = [thisPistol TotalCostOfWeapon] * weaponQuanity;
         
         //Reset all buttons to enabled state
@@ -201,6 +204,9 @@
     //Calculate Rifle Data
     if (rifleButton.enabled == false)
     {
+        //Instance
+        Rifle *thisRifle = (Rifle*)[WeaponFactory CreateWeapon:HUNTINGRIFLE];
+        
         int totalQuanityCost = [thisRifle TotalCostOfWeapon] * weaponQuanity;
         
      
