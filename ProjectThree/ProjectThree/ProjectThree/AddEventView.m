@@ -96,4 +96,16 @@
     
 
 }
+
+-(IBAction)cancelEvent:(id)sender
+{
+    
+    if(delegate != nil)
+    {
+        
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+    }
+    
+    
+}
 @end
