@@ -8,22 +8,41 @@
 
 #import "MainViewController.h"
 
+
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
 
-- (void)viewDidLoad
+//Access Add Event View
+-(IBAction)addEvent:(id)sender
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    AddEventView *addEventController = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
+    if (addEventController != nil)
+    {
+            [addEventController setDelegate:self];
+        [self presentViewController:addEventController animated:YES completion:nil];
+    }
 }
 
-- (void)didReceiveMemoryWarning
+
+//Gather/Display event Details from AddEvent View
+-(void)eventDetail:(NSString *)detailsText
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *eventString = detailsText;
+  
+    //If no content in Text View add Details
+    if([eventTextView.text isEqualToString:@""])
+    {
+        eventTextView.text = detailsText;
+        //NSLog(@"%@", detailsText);
+    }
+    else
+    {
+        //Append New Events to previous list
+        eventTextView.text = [eventTextView.text stringByAppendingString:eventString];
+    }
 }
 
 @end
