@@ -49,6 +49,11 @@
 -(IBAction)closeKeyboard:(id)sender
 {
 
+    if (closeKeyboard.tag == 0)
+    {
+        [eventTextField resignFirstResponder];
+
+    }
 }
 
 
@@ -61,7 +66,7 @@
     {
 
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"EEEE, MMMM dd,yyyy hh:mm a"];
+        [dateFormat setDateFormat:@"MMMM dd,yyyy hh:mm a"];
         formattedDate = [dateFormat stringFromDate:datePicker.date];
         
         eventDate = formattedDate;
