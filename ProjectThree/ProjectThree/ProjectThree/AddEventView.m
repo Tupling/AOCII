@@ -30,10 +30,9 @@
 
 - (void)viewDidLoad
 {
-    //Set Date Attributes
-    NSDate *minimum = [NSDate date];
-    datePicker.minimumDate = minimum;
-    eventDate = [NSDate date];
+    //Set Date minimum on viewDidLoad
+    [datePicker setMinimumDate:[NSDate date]];
+
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -65,13 +64,10 @@
     if (datePicker != nil)
     {
 
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"MMMM dd,yyyy hh:mm a"];
-        formattedDate = [dateFormat stringFromDate:datePicker.date];
-        
+
         eventDate = formattedDate;
         
-        //NSLog(@"Date=%@", [datePicker date]);
+        NSLog(@"Date=%@", [datePicker date]);
     }
 }
 
@@ -92,8 +88,16 @@
         }
         else if (eventTextField.text.length >= 1)
         {
-        //Collect EventText and Event Date
+        //Collect EventText
         eventText = eventTextField.text;
+            
+        //Formate Date
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"MMMM dd,yyyy hh:mm a"];
+        formattedDate = [dateFormat stringFromDate:datePicker.date];
+        [datePicker setDate:[NSDate date]];
+            
+        //Collect Formated date place into eventDate
         eventDate = formattedDate;
         
         //Designated string format event
