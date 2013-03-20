@@ -45,7 +45,7 @@
 		33BA9A3C16F58D9B00E5A64D /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		33BA9A3F16F58D9B00E5A64D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		33BA9A4616F58F4B00E5A64D /* addEvent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addEvent.png; path = ../addEvent.png; sourceTree = "<group>"; };
-		33F9133816F8E81100A7837F /* CloseKeyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseKeyboard.png; sourceTree = "<group>"; };
+		33F9133816F8E81100A7837F /* CloseKeyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseKeyboard.png; path = ../CloseKeyboard.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,6 @@
 		33BA9A1416F58D9B00E5A64D = {
 			isa = PBXGroup;
 			children = (
-				33F9133816F8E81100A7837F /* CloseKeyboard.png */,
 				33BA9A2916F58D9B00E5A64D /* ProjectThree */,
 				33BA9A2216F58D9B00E5A64D /* Frameworks */,
 				33BA9A2016F58D9B00E5A64D /* Products */,
@@ -106,6 +105,7 @@
 		33BA9A2A16F58D9B00E5A64D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33F9133816F8E81100A7837F /* CloseKeyboard.png */,
 				3396CC1A16F7894600198669 /* AddEventView.h */,
 				3396CC1B16F7894600198669 /* AddEventView.m */,
 				3396CC1C16F7894600198669 /* AddEventView.xib */,

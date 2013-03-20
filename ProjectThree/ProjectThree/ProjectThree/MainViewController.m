@@ -15,6 +15,17 @@
 
 @implementation MainViewController
 
+- (void)viewDidLoad
+{
+    //Set TextView Text
+    eventTextView.text = @"Event List";
+    [self.view addSubview:eventTextView];
+    
+    
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+}
+
 //Access Add Event View
 -(IBAction)addEvent:(id)sender
 {
@@ -33,7 +44,7 @@
     NSString *eventString = detailsText;
   
     //If no content in Text View add Details
-    if([eventTextView.text isEqualToString:@""])
+    if([eventTextView.text isEqualToString:@"Event List"])
     {
         eventTextView.text = detailsText;
         //NSLog(@"%@", detailsText);
@@ -44,5 +55,6 @@
         eventTextView.text = [eventTextView.text stringByAppendingString:eventString];
     }
 }
+
 
 @end

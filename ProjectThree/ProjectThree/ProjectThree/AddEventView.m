@@ -81,6 +81,17 @@
 
     if(delegate != nil)
     {
+        if(eventTextField.text.length == 0)
+        {
+            UIAlertView *noTextAlert = [[UIAlertView alloc] initWithTitle:@"No Event Title"
+                                                                  message:@"You must enter a valid event title."
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
+            [noTextAlert show];
+        }
+        else if (eventTextField.text.length >= 1)
+        {
         //Collect EventText and Event Date
         eventText = eventTextField.text;
         eventDate = formattedDate;
@@ -92,6 +103,7 @@
         [delegate eventDetail:detailsText];
         
         [self dismissViewControllerAnimated:TRUE completion:nil];
+        }
     }
     
 
