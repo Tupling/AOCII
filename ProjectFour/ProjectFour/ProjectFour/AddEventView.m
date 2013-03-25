@@ -42,11 +42,14 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 //Close Keyboard Action
 -(IBAction)closeKeyboard:(id)sender
@@ -80,43 +83,41 @@
 {
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
     {
-    if(delegate != nil)
-    {
-        if(eventTextField.text.length == 0)
+        if(delegate != nil)
         {
-            UIAlertView *noTextAlert = [[UIAlertView alloc] initWithTitle:@"No Event Title"
-                                                                  message:@"You must enter a valid event title."
-                                                                 delegate:nil
-                                                        cancelButtonTitle:@"OK"
-                                                        otherButtonTitles: nil];
-            [noTextAlert show];
-        }
-        else if (eventTextField.text.length >= 1)
-        {
-        //Collect EventText
-        eventText = eventTextField.text;
+            if(eventTextField.text.length == 0)
+            {
+                UIAlertView *noTextAlert = [[UIAlertView alloc] initWithTitle:@"No Event Title"
+                                                                      message:@"You must enter a valid event title."
+                                                                     delegate:nil
+                                                            cancelButtonTitle:@"OK"
+                                                            otherButtonTitles: nil];
+                [noTextAlert show];
+            }
+            else if (eventTextField.text.length >= 1)
+            {
+                //Collect EventText
+                eventText = eventTextField.text;
             
-        //Formate Date
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"MMMM dd,yyyy hh:mm a"];
-        formattedDate = [dateFormat stringFromDate:datePicker.date];
-        [datePicker setDate:[NSDate date]];
+                //Formate Date
+                NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+                [dateFormat setDateFormat:@"MMMM dd,yyyy hh:mm a"];
+                formattedDate = [dateFormat stringFromDate:datePicker.date];
+                [datePicker setDate:[NSDate date]];
             
-        //Collect Formated date place into eventDate
-        eventDate = formattedDate;
+                //Collect Formated date place into eventDate
+                eventDate = formattedDate;
         
-        //Designated string format event
-        NSString *detailsText = [NSString stringWithFormat:@"New Event: %@\n%@\n\n", eventText, eventDate];
+                //Designated string format event
+                NSString *detailsText = [NSString stringWithFormat:@"New Event: %@\n%@\n\n", eventText, eventDate];
         
-        //Pass detailsText
-        [delegate eventDetail:detailsText];
+                //Pass detailsText
+                [delegate eventDetail:detailsText];
         
-        [self dismissViewControllerAnimated:TRUE completion:nil];
+                [self dismissViewControllerAnimated:TRUE completion:nil];
+            }
         }
     }
-    }
-    
-
 }
 
 -(IBAction)cancelEvent:(id)sender
@@ -127,7 +128,5 @@
         
         [self dismissViewControllerAnimated:TRUE completion:nil];
     }
-    
-    
 }
 @end
