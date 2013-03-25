@@ -22,18 +22,27 @@
     [self.view addSubview:eventTextView];
     
     
+    //Set sqipe gesture direction alloc and init
+    rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(addEvent:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeRightLabel addGestureRecognizer:rightSwipe];
+    
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
 //Access Add Event View
--(IBAction)addEvent:(id)sender
+-(void)addEvent:(UISwipeGestureRecognizer*)recognizer
 {
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight)
+    {
     AddEventView *addEventController = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
     if (addEventController != nil)
     {
             [addEventController setDelegate:self];
         [self presentViewController:addEventController animated:YES completion:nil];
+    }
     }
 }
 

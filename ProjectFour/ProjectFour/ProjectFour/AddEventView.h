@@ -19,6 +19,7 @@
     //Outlets TextField and Date Picker
     IBOutlet UITextField *eventTextField;
     IBOutlet UIDatePicker *datePicker;
+    IBOutlet UILabel *swipeLeftLabel;
     
     //Public Instances
     NSString *eventText;
@@ -26,6 +27,9 @@
     NSString *formattedDate;
     UIButton *save;
     UIButton *closeKeyboard;
+    
+    //Swipe Gesture Recognizer
+    UISwipeGestureRecognizer *leftSwipe;
 
     
     id<AddEventViewDelegate> delegate;

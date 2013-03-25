@@ -32,6 +32,10 @@
 {
     //Set Date minimum on viewDidLoad
     [datePicker setMinimumDate:[NSDate date]];
+    
+    leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(saveEvent:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeLeftLabel addGestureRecognizer:leftSwipe];
 
     
     [super viewDidLoad];
@@ -72,9 +76,10 @@
 }
 
 //Save Event
--(IBAction)saveEvent:(id)sender
+-(void)saveEvent:(UISwipeGestureRecognizer*)recognizer
 {
-
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
     if(delegate != nil)
     {
         if(eventTextField.text.length == 0)
@@ -108,6 +113,7 @@
         
         [self dismissViewControllerAnimated:TRUE completion:nil];
         }
+    }
     }
     
 

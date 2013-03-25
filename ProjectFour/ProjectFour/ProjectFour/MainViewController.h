@@ -13,13 +13,11 @@
 {
     //Outlet for TextView
     IBOutlet UITextView *eventTextView;
+    IBOutlet UILabel *swipeRightLabel;
 
-
+    //Swipe Gesture Rocognizer
+    UISwipeGestureRecognizer *rightSwipe;
 
 }
-
-//Add Event Button Action
--(IBAction)addEvent:(id)sender;
-
 
 @end
