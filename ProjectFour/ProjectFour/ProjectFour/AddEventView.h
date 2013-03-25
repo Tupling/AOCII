@@ -35,9 +35,7 @@
     id<AddEventViewDelegate> delegate;
 }
 
--(IBAction)closeKeyboard:(id)sender;
--(IBAction)onChange:(id)sender;
--(IBAction)cancelEvent:(id)sender;
+
 
 
 @property (strong) id<AddEventViewDelegate> delegate;
