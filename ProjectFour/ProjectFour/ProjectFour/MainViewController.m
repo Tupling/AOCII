@@ -54,7 +54,23 @@
     if (userDefaults != nil)
         {
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"events"];
+            
+            //Notification to inform users event data as been cleared
+            //Notification to let users know event data has been saved
+            UIAlertView *dataRemoved = [[UIAlertView alloc] initWithTitle:@"Events Deleted"
+                                                                message:@"Your event list has been deleted."
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles: nil];
+            [dataRemoved show];
+            
+            //Syncrhonize data
+            [userDefaults synchronize];
+            
+            //Reset event placeholder text back to default
             eventTextView.text = @"All the events go here...";
+            
+            
         }
 }
 
@@ -70,6 +86,14 @@
             
             //Save userDefaults data and ensures any modifications are saved to userDefaults
             [userDefaults synchronize];
+            
+            //Notification to let users know event data has been saved
+            UIAlertView *dataSaved = [[UIAlertView alloc] initWithTitle:@"Events Saved"
+                                                                  message:@"Your event list has been saved."
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
+            [dataSaved show];
         }
 }
 
