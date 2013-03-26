@@ -68,7 +68,7 @@
             NSString *userEvents = eventTextView.text;
             [userDefaults setObject:userEvents forKey:@"events"];
             
-            //Save userDefaults data and ensures any modifications are saved as to userDefaults
+            //Save userDefaults data and ensures any modifications are saved to userDefaults
             [userDefaults synchronize];
         }
 }
